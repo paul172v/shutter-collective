@@ -1,0 +1,19 @@
+@import "../../sass/colors.scss";
+
+.section-events {
+  background-color: $color-primary;
+  color: white;
+  min-height: 100vh;
+}
+
+.sub-heading {
+  text-align: center;
+  font-size: 2rem;
+  padding: 2rem 0;
+}
+
+.events-wrapper {
+  padding: 0 2rem;
+  display: flex;
+  flex-direction: column;
+}

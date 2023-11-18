@@ -1,0 +1,41 @@
+@import "../../sass/colors.scss";
+
+.section-portfolio {
+  background-color: $color-secondary;
+  color: $color-black;
+  padding-bottom: 4rem;
+}
+
+.sub-heading {
+  font-size: 2rem;
+  text-align: center;
+  padding: 2rem 0;
+}
+
+.gallery-wrapper {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: repeat(3, 20rem);
+  gap: 2rem;
+  padding: 0 2rem;
+}
+
+.photo {
+  height: 100%;
+  width: 100%;
+  border: 1px solid $color-black;
+}
+
+@media (max-width: 800px) {
+  .gallery-wrapper {
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: repeat(5, 12rem);
+  }
+}
+
+@media (max-width: 480px) {
+  .gallery-wrapper {
+    grid-template-columns: 1fr;
+    grid-template-rows: repeat(9, 15rem);
+  }
+}
