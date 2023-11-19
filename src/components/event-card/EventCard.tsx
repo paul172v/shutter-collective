@@ -15,7 +15,7 @@ const EventCard: React.FC<{
       <div className={classes["image-wrapper"]}>
         <img
           className={classes.image}
-          src={`../../../public/${props.image}.jpg`}
+          src={`./${props.image}.jpg`}
           alt="location"
         />
       </div>
