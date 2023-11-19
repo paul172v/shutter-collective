@@ -1,4 +1,5 @@
 import React from "react";
+import { Element } from "react-scroll";
 
 import classes from "./Events.module.scss";
 
@@ -7,7 +8,9 @@ import EventCard from "../../components/event-card/EventCard";
 const Events: React.FC = () => {
   return (
     <section className={classes["section-events"]}>
-      <h2 className={classes["sub-heading"]}>Events & Workshops</h2>
+      <Element name="anchor-events" className="element">
+        <h2 className={classes["sub-heading"]}>Events & Workshops</h2>
+      </Element>
       <div className={classes["events-wrapper"]}>
         <EventCard
           image="event1"

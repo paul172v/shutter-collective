@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-scroll";
 
 import classes from "./Hero.module.scss";
 
@@ -9,10 +10,26 @@ const Hero: React.FC = () => {
         <h1 className={classes.title}>Shutter Collective</h1>
         <nav>
           <ul className={classes["nav-list"]}>
-            <li>About Us</li>
-            <li>Portfolio</li>
-            <li>Events</li>
-            <li>Contact Us</li>
+            <li>
+              <Link to="anchor-about-us" smooth={true} duration={1000}>
+                About Us
+              </Link>
+            </li>
+            <li>
+              <Link to="anchor-portfolio" smooth={true} duration={1000}>
+                Portfolio
+              </Link>
+            </li>
+            <li>
+              <Link to="anchor-events" smooth={true} duration={1000}>
+                Events
+              </Link>
+            </li>
+            <li>
+              <Link to="anchor-contact-us" smooth={true} duration={1000}>
+                Contact Us
+              </Link>
+            </li>
           </ul>
         </nav>
       </header>

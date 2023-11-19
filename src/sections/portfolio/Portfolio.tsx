@@ -1,11 +1,14 @@
 import React from "react";
+import { Element } from "react-scroll";
 
 import classes from "./Portfolio.module.scss";
 
 const Portfolio: React.FC = () => {
   return (
     <section className={classes["section-portfolio"]}>
-      <h2 className={classes["sub-heading"]}>Portfolio</h2>
+      <Element name="anchor-portfolio" className="element">
+        <h2 className={classes["sub-heading"]}>Portfolio</h2>
+      </Element>
       <div className={classes["gallery-wrapper"]}>
         <img
           src="./01.jpg"

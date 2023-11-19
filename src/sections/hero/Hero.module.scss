@@ -71,9 +71,27 @@
   }
 }
 
-@media (max-width: 480px) {
+@media (max-width: 800px) and (orientation: landscape) {
+  .header {
+    opacity: 0.8;
+  }
+
   .tagline {
-    top: 80vh;
+    font-size: 2rem;
+    color: $color-secondary;
+    position: absolute;
+    top: 18rem;
+    left: 4rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .header {
+    opacity: 0.8;
+  }
+
+  .tagline {
+    top: 75vh;
     right: 2rem;
     left: 4rem;
     font-size: 1.8rem;
