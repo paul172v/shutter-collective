@@ -1,6 +1,12 @@
 @import "./sass/colors";
 
+.window-wrapper {
+  background-color: $color-primary;
+  display: flex;
+  justify-content: center;
+}
+
 .page {
   min-height: 100svh;
-  background-color: $color-primary;
+  max-width: 1920px;
 }

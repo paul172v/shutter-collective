@@ -8,12 +8,14 @@ import Footer from "./components/footer/Footer";
 
 function App() {
   return (
-    <div className={classes.page}>
-      <Hero />
-      <AboutUs />
-      <Portfolio />
-      <Events />
-      <Footer />
+    <div className={classes["window-wrapper"]}>
+      <div className={classes.page}>
+        <Hero />
+        <AboutUs />
+        <Portfolio />
+        <Events />
+        <Footer />
+      </div>
     </div>
   );
 }

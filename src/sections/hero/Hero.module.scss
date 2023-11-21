@@ -26,7 +26,7 @@
   color: $color-secondary;
   position: absolute;
   top: 8rem;
-  right: 4rem;
+  right: 25vw;
 }
 
 .nav-list {
@@ -44,6 +44,13 @@
 
   li:hover {
     cursor: pointer;
+  }
+}
+
+@media (max-width: 1920px) {
+  .tagline {
+    top: 8rem;
+    right: 4rem;
   }
 }
 
