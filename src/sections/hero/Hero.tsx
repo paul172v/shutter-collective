@@ -1,40 +1,32 @@
-import React from "react";
 import { Link } from "react-scroll";
-
 import classes from "./Hero.module.scss";
 
-const Hero: React.FC = () => {
+const navLinks = [
+  { to: "anchor-about-us", label: "About Us" },
+  { to: "anchor-portfolio", label: "Portfolio" },
+  { to: "anchor-events", label: "Events" },
+  { to: "anchor-contact-us", label: "Contact Us" },
+];
+
+const Hero = () => {
   return (
-    <section className={classes["section-hero"]}>
+    <section className={classes.sectionHero}>
       <header className={classes.header}>
         <h1 className={classes.title}>Shutter Collective</h1>
         <nav>
-          <ul className={classes["nav-list"]}>
-            <li>
-              <Link to="anchor-about-us" smooth={true} duration={1000}>
-                About Us
-              </Link>
-            </li>
-            <li>
-              <Link to="anchor-portfolio" smooth={true} duration={1000}>
-                Portfolio
-              </Link>
-            </li>
-            <li>
-              <Link to="anchor-events" smooth={true} duration={1000}>
-                Events
-              </Link>
-            </li>
-            <li>
-              <Link to="anchor-contact-us" smooth={true} duration={1000}>
-                Contact Us
-              </Link>
-            </li>
+          <ul className={classes.navList}>
+            {navLinks.map((link) => (
+              <li key={link.to}>
+                <Link to={link.to} smooth={true} duration={1000}>
+                  {link.label}
+                </Link>
+              </li>
+            ))}
           </ul>
         </nav>
       </header>
       <p className={classes.tagline}>
-        &quot;Capturing the world through our lenses&quot;
+        "Capturing the world through our lenses"
       </p>
     </section>
   );

@@ -1,85 +1,103 @@
 @import "../../sass/colors.scss";
 
-.section-portfolio {
+.sectionPortfolio {
   background-color: $color-secondary;
   color: $color-black;
   padding-bottom: 4rem;
+  width: 100%;
 }
 
-.sub-heading {
+.subHeading {
   font-size: 2rem;
   text-align: center;
   padding: 2rem 0;
 }
 
-.gallery-wrapper {
+.galleryWrapper {
   display: grid;
-  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-columns: repeat(3, 1fr);
   grid-template-rows: repeat(3, 20rem);
   gap: 2rem;
   padding: 0 2rem;
+  background-color: $color-secondary;
 }
 
 .photo {
   height: 100%;
   width: 100%;
   border: 1px solid $color-black;
-}
+  filter: brightness(0.8);
+  transition: filter 0.5s;
 
-.photo:hover {
-  cursor: pointer;
+  &:hover {
+    cursor: pointer;
+    filter: brightness(1);
+  }
 }
 
 .modal {
   position: fixed;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  background-color: black;
-  -webkit-transform: translate(-50%, -50%);
-  -moz-transform: translate(-50%, -50%);
-  -ms-transform: translate(-50%, -50%);
-  -o-transform: translate(-50%, -50%);
-  display: flex;
-  flex-direction: column;
-  height: 100svh;
+  height: 100vh; // Corrected from 100svh to 100vh
   width: 100vw;
-  align-items: center;
-  justify-content: center;
+  background-color: rgba(0, 0, 0, 0.8); // Merged duplicated property
 
-  img {
-    max-width: 100%;
-    max-height: 100%;
+  .galleryGrid {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 10vh 70vh 10vh 10vh;
   }
 
-  button {
+  .modalPhoto {
+    grid-column: 2/3;
+    grid-row: 2/3;
+    height: 100%;
+    align-self: center;
+    justify-self: center;
+    border: 25px solid white;
+    box-shadow: 4px 6px 20px black;
+  }
+
+  .uRow {
+    grid-column: 2/3;
+    grid-row: 3/4;
+    justify-self: center;
+  }
+
+  .btnPrevNextPhoto,
+  .btnModalClose {
     height: 3rem;
     width: 8rem;
-    margin: 2rem;
+    margin: 2rem 4rem;
     font-size: 1.6rem;
     background-color: white;
     border: none;
     border-radius: 4px;
-    -webkit-border-radius: 4px;
-    -moz-border-radius: 4px;
-    -ms-border-radius: 4px;
-    -o-border-radius: 4px;
+
+    &:hover {
+      cursor: pointer;
+    }
   }
 
-  button:hover {
-    cursor: pointer;
+  .btnModalClose {
+    width: auto;
+    background-color: transparent;
+    color: white;
+    font-size: 2.5rem;
+    justify-self: flex-end;
+    grid-column: 3/4;
+    margin: 2rem;
   }
 }
 
 @media (max-width: 800px) {
-  .gallery-wrapper {
-    grid-template-columns: 1fr 1fr;
+  .galleryWrapper {
+    grid-template-columns: repeat(2, 1fr);
     grid-template-rows: repeat(5, 12rem);
   }
 }
 
 @media (max-width: 480px) {
-  .gallery-wrapper {
+  .galleryWrapper {
     grid-template-columns: 1fr;
     grid-template-rows: repeat(9, 15rem);
   }

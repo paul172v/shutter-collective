@@ -1,10 +1,8 @@
 @import "../../sass/colors.scss";
 
-.section-hero {
-  height: 100svh;
-  background-image: url("../../../public/hero-image.jpg");
-  background-position: center;
-  background-size: cover;
+.sectionHero {
+  height: 100vh; // Corrected "svh" to "vh"
+  background: url("../../../public/hero-image.jpg") center/cover no-repeat;
 }
 
 .header {
@@ -13,12 +11,12 @@
   display: flex;
   align-items: center;
   justify-content: space-between;
+  padding: 0 4rem; // Added padding here for consistency
 }
 
 .title {
   font-size: 2.4rem;
   color: $color-black;
-  margin-left: 4rem;
 }
 
 .tagline {
@@ -29,27 +27,25 @@
   right: 25vw;
 }
 
-.nav-list {
+.navList {
   list-style: none;
   display: flex;
   height: 100%;
-  margin-bottom: 2rem;
-  padding-left: 2rem;
+  margin: 2rem 0;
 
   li {
     margin-right: 2rem;
-    margin-top: 2rem;
     font-size: 1rem;
-  }
 
-  li:hover {
-    cursor: pointer;
+    &:hover {
+      cursor: pointer;
+    }
   }
 }
 
+// Consolidating media queries for better readability
 @media (max-width: 1920px) {
   .tagline {
-    top: 8rem;
     right: 4rem;
   }
 }
@@ -57,24 +53,23 @@
 @media (max-width: 800px) {
   .tagline {
     top: 80vh;
-    margin-left: 0;
-    margin-right: 4rem;
+    right: 4rem;
+    left: auto; // Reset left property
     font-size: 1.8rem;
   }
 
   .title {
     font-size: 2rem;
-    margin-left: 0;
   }
 
   .header {
     height: 12rem;
-    justify-content: center;
     flex-direction: column;
+    align-items: center; // Added for center alignment
   }
 
-  .nav-list {
-    margin-bottom: 0;
+  .navList {
+    justify-content: center;
   }
 }
 
@@ -84,9 +79,6 @@
   }
 
   .tagline {
-    font-size: 2rem;
-    color: $color-secondary;
-    position: absolute;
     top: 65vh;
     left: 4rem;
   }
@@ -100,24 +92,11 @@
   .tagline {
     top: 65vh;
     right: 2rem;
-    left: 4rem;
     font-size: 1.8rem;
   }
 
-  .title {
-    font-size: 2rem;
-    margin-left: 0;
-  }
-
-  .header {
-    height: 12rem;
-    justify-content: center;
-    flex-direction: column;
-  }
-
-  .nav-list {
+  .navList {
     flex-wrap: wrap;
-    justify-content: center;
 
     li {
       font-size: 1.2rem;
