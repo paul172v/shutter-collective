@@ -14,9 +14,18 @@
   padding: 0 4rem; // Added padding here for consistency
 }
 
+.title-wrapper {
+  display: flex;
+  align-items: center;
+}
+
 .title {
   font-size: 2.4rem;
   color: $color-black;
+}
+
+.logo {
+  height: 4rem;
 }
 
 .tagline {

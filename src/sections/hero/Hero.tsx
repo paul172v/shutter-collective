@@ -12,7 +12,14 @@ const Hero = () => {
   return (
     <section className={classes.sectionHero}>
       <header className={classes.header}>
-        <h1 className={classes.title}>Shutter Collective</h1>
+        <div className={classes["title-wrapper"]}>
+          <img
+            className={classes.logo}
+            src="logo.png"
+            alt="Shutter Collective Logo"
+          />
+          <h1 className={classes.title}>Shutter Collective</h1>
+        </div>
         <nav>
           <ul className={classes.navList}>
             {navLinks.map((link) => (
