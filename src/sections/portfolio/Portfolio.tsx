@@ -29,7 +29,7 @@ const Portfolio = () => {
   return (
     <React.Fragment>
       <section className={classes["sectionPortfolio"]}>
-        <Element name="anchorPortfolio" className="element">
+        <Element name="anchor-portfolio" className="element">
           <h2 className={classes["subHeading"]}>Portfolio</h2>
         </Element>
         <div className={classes["galleryWrapper"]}>
