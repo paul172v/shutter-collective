@@ -59,7 +59,7 @@
   }
 }
 
-@media (max-width: 800px) {
+@media (max-width: 1000px) {
   .tagline {
     top: 80vh;
     right: 4rem;
@@ -72,7 +72,8 @@
   }
 
   .header {
-    height: 12rem;
+    padding: 2rem 0 4rem 0;
+    height: 10rem;
     flex-direction: column;
     align-items: center; // Added for center alignment
   }
@@ -96,6 +97,8 @@
 @media (max-width: 480px) {
   .header {
     opacity: 0.8;
+    height: auto;
+    padding-bottom: 0;
   }
 
   .tagline {
@@ -105,8 +108,9 @@
   }
 
   .navList {
+    margin-left: 1rem;
     flex-wrap: wrap;
-
+    gap: 1rem 0;
     li {
       font-size: 1.2rem;
     }
